@@ -1,0 +1,43 @@
+.root {
+    -fx-background-color: #5c5c5c;
+    -fx-text-fill: white;
+}
+
+#tittle{
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.table-view {
+    -fx-background-color: #f4f4f4;
+}
+
+.button {
+    -fx-background-color: rgba(13, 30, 214, 0.94);
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-padding: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 8, 0.5, 2, 2);
+}
+
+.button:hover {
+    -fx-background-color: rgba(43, 94, 220, 0.94);
+    -fx-translate-y: 4px;
+}
+
+.form {
+    -fx-padding: 15;
+    -fx-spacing: 10;
+}
+
+#labelTotal {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+#lbTotal{
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}

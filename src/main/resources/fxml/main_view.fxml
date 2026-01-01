@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.controller.ExpenseController">
+
+    <top>
+        <Label fx:id="tittle" text="Gestor de Despesas"/>
+    </top>
+
+    <left>
+        <VBox spacing="5" styleClass="form">
+
+            <TextField fx:id="descriptionField" promptText="Descrição"/>
+
+            <HBox spacing="5">
+                <Label text="Categoria: "/>
+                <ComboBox fx:id="categoryCombo">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Alimentação"/>
+                            <String fx:value="Transporte"/>
+                            <String fx:value="Lazer"/>
+                            <String fx:value="Outros"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </HBox>
+
+            <TextField fx:id="amountField" promptText="Valor (€)"/>
+
+            <DatePicker fx:id="datePicker"/>
+
+            <HBox spacing="10">
+                <Button text="Adicionar" onAction="#handleAddExpense"/>
+                <Button text="Exportar CSV" onAction="#handleExportExcel"/>
+            </HBox>
+        </VBox>
+    </left>
+
+    <center>
+        <TableView fx:id="expenseTable">
+            <columns>
+                <TableColumn fx:id="descriptionColumn" text="Descrição"/>
+                <TableColumn fx:id="categoryColumn" text="Categoria"/>
+                <TableColumn fx:id="amountColumn" text="Valor"/>
+                <TableColumn fx:id="dateColumn" text="Data"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <HBox spacing="10">
+            <Label fx:id="labelTotal" text="Total Despesas: "/>
+            <Label fx:id="lbTotal"/>
+        </HBox>
+    </bottom>
+
+
+</BorderPane>
